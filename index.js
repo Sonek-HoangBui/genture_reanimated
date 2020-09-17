@@ -8,9 +8,9 @@ import App from './App';
 import TestAnimated from './TestAnimated';
 import {name as appName} from './app.json';
 import './routes/registerComponents';
-
+import Spring from './Animation/spring'
 Navigation.registerComponent('com.myApp.WelcomeScreen', () => App);
-Navigation.registerComponent('com.myApp.TestAnimated', () => TestAnimated);
+Navigation.registerComponent('com.myApp.TestAnimated', () => Spring);
 Navigation.events().registerAppLaunchedListener(() => {
   Navigation.setRoot({
     root: {
@@ -32,4 +32,4 @@ Navigation.events().registerAppLaunchedListener(() => {
     },
   });
 });
-AppRegistry.registerComponent(appName, () => App);
+AppRegistry.registerComponent(appName, () => Spring);

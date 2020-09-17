@@ -67,14 +67,15 @@ export default ({}: ContentProps) => {
   let clock = new Clock();
   // and use runTiming method defined above to create a node that is going to be mapped
   // to the translateX transform
-  let transX = runTiming(clock, -120, 240);
+  let transY = runTiming(clock, -120, 240);
+  
 
   return (
     <View style={{flex: 1}}>
       <Animated.View
         style={[
           {width: 100, height: 100, backgroundColor: 'green'},
-          {transform: [{translateX: transX}]},
+          {transform: [{translateY: transY}]},
         ]}
       />
       <Text>Hello</Text>
